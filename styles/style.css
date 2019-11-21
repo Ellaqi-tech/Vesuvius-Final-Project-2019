@@ -41,6 +41,20 @@ Table of Content:
 /**************************
 7. Menu
 **************************/
+#content-flexbox {
+    display:flex;
+    flex-flow: row wrap;
+}
+#main-picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#appetizer, #entree, #main-course, #dessert {
+    flex: 1 0 0;
+    margin-left:10px;
+}
 
 /**************************
 8. Booking
