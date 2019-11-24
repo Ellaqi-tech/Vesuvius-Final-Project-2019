@@ -49,11 +49,15 @@ Table of Content:
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
 }
-#appetizer, #entree, #main-course, #dessert {
+#appetizer, #main-course, #dessert {
     flex: 1 0 0;
-    margin-left:10px;
+    text-align:center;
+}
+#menu {
+    max-width: 900px;
+    text-align:center;
 }
 
 /**************************
