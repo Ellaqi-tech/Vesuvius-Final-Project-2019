@@ -41,7 +41,7 @@ Table of Content:
 /**************************
 7. Menu
 **************************/
-#content-flexbox {
+.content-flexbox {
     display:flex;
     flex-flow: row wrap;
 }
@@ -51,7 +51,7 @@ Table of Content:
   margin-right: auto;
   width: 100%;
 }
-#appetizer, #main-course, #dessert {
+.menu-pictures, .food-list {
     flex: 1 0 0;
     text-align:center;
 }
