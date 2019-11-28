@@ -66,15 +66,11 @@ Table of Content:
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 50%;
 }
-#appetizer, #main-course, #dessert {
+#appetizer, #entree, #main-course, #dessert {
     flex: 1 0 0;
-    text-align:center;
-}
-#menu {
-    max-width: 900px;
-    text-align:center;
+    margin-left:10px;
 }
 
 /**************************
@@ -83,8 +79,19 @@ Table of Content:
 
 /**************************
 9. Careers
-**************************/
-
+**************************/	
+#quick-search-job {
+	flex: 1 0 100%;
+}
+#result-job {
+	flex: 1 0 100%;
+}
+.result-job-id {
+	flex: 1 0 100%;
+}
+.result-job-detail {
+	flex: 1 0 100%;
+}
 /**************************
 10. Site Map
 **************************/
