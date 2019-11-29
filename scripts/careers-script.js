@@ -19,13 +19,14 @@ function careersLoad() {
 		}
 		
 		//Filter the result list
+		//Hide all the result jobs list
 		$("#result-job-list li").hide();
 		//Resturant or Corporate Content
 		if ($(this).attr("id") !== "search-job") {
 			//For each li in the list do the following commands
 			$("#" + ($(this).attr("id")) + "-content ul li").each(function(idx, li) {
 				
-				//This create a Regex for each li element in the list Ex. Chef
+				//This create a Regex for each li element in the list Ex. Chef, Dishwasher, and etc.
 				var regexQuickSearch = new RegExp(".*" + $(li).text() + ".*", "i");
 				
 				//Call function to Show any job that pass the regex
@@ -36,12 +37,23 @@ function careersLoad() {
 		//Search Content
 		else {
 			//Clear the input field
-			$("#search-job-input").val("");			
+			$("#search-job-input").val("");	
+			//This create a Regex from the user input which is default it as empty
 			var regexQuickSearch = new RegExp(".*" + $("#search-job-input").val() + ".*", "i");
 			//Call function to Show any job that pass the regex
 			SearchJobFilter(regexQuickSearch);
 		}
 		
+	});
+	
+	//If the user click on the specific list elements of the Resturant or Corporate content
+	$(".job-content ul li").click(function() {
+		//Hide all the result jobs list
+		$("#result-job-list li").hide();
+		//This create a Regex for the specific li element in the list Ex. Chef
+		var regexQuickSearch = new RegExp(".*" + $(this).text() + ".*", "i");
+		//Call function to Show any job that pass the regex
+		SearchJobFilter(regexQuickSearch);
 	});
 	
 	//If user click on search-job-button (The Search Careers button)
