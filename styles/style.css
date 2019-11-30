@@ -58,7 +58,8 @@ Table of Content:
 /**************************
 7. Menu
 **************************/
-.content-flexbox {
+
+.flex-container {
     display:flex;
     flex-flow: row wrap;
 }
@@ -75,6 +76,15 @@ Table of Content:
 #menu {
     max-width: 900px;
     text-align:center;
+    flex:2 0 0;
+}
+#appetizer-list, #main-dish-list, #dessert-list {
+    display:none;
+    margin: 3em 3em;
+}
+#menu-price {
+    flex:1 0 0;
+    background: url("menu-background2-01.jpg");
 }
 
 /**************************
