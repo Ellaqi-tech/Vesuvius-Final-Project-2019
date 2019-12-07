@@ -65,20 +65,24 @@ Table of Content:
 }
 #main-picture {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin:0;
   width: 100%;
 }
 .menu-pictures, .food-list {
     flex: 1 0 0;
     text-align:center;
+    margin:0;
+}
+.menu-pictures img {
+    max-width:99%;
+    height: auto;
 }
 #menu {
     max-width: 900px;
     text-align:center;
     flex:2 0 0;
 }
-#appetizer-list, #main-dish-list, #dessert-list {
+.menu-list {
     display:none;
     margin: 3em 3em;
 }
@@ -90,6 +94,17 @@ Table of Content:
 /**************************
 8. Booking
 **************************/
+#booking-sitename {
+    text-align: center;
+    transform: translateY(-1000%);
+    color:white;
+    font-weight:bold;
+    font-size:40px;
+}
+.h2Booking {
+   background: #D99E50;
+    text-align: center;
+}
 
 /**************************
 9. Careers

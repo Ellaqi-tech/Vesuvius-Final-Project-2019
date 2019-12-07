@@ -7,7 +7,9 @@ function pageReady () {
     var menuPictures = document.getElementsByClassName("menu-pictures");
     var appetizerPicture = document.getElementById("appetizer");
     var mainCoursePicture = document.getElementById("main-course");
-    var dessertPicture = document.getElementById("dessert");
+    var brunchPicture = document.getElementById("brunch");
+    var drinkPicture = document.getElementById("drink");    
+    var dessertPicture = document.getElementById("dessert");   
     
     var appetizerMenu = document.getElementById("appetizer-list");
     var mainDishMenu = document.getElementById("main-dish-list");
@@ -17,8 +19,11 @@ function pageReady () {
     //add Event Listener
     //onmousover
     appetizerPicture.onmouseover = changePic1;
-    mainCoursePicture.onmouseover = changePic3;
-    dessertPicture.onmouseover = changePic4;
+    mainCoursePicture.onmouseover = changePic2;
+    dessertPicture.onmouseover = changePic3;
+    brunchPicture.onmouseover = changePic4;
+    drinkPicture.onmouseover = changePic5;
+    
     //onclick
     appetizerPicture.onclick = displayMenu1;
     mainCoursePicture.onclick = displayMenu2;
@@ -28,13 +33,18 @@ function pageReady () {
     function changePic1 () {
         mainPicture.src = "image/big-appetizer.jpg";
     }
-    function changePic3 () {
+    function changePic2 () {
         mainPicture.src = "image/big-main-course.jpg";
     }
-    function changePic4 () {
+    function changePic3 () {
         mainPicture.src = "image/big-dessert.jpg";
     }
-    
+    function changePic4 () {
+        mainPicture.src = "image/big-brunch.jpg"
+    }
+    function changePic5 () {
+        mainPicture.src = "image/big-drink.jpg"
+    }
     //onclick
     function displayMenu1 () {
         appetizerMenu.style.display="block";        
