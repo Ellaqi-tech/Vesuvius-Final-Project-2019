@@ -32,17 +32,16 @@
                         <div class="flex-container">
                             <div class="booking-customer-info">Please enter your reservation information:
                                 <div><label for ="bookingdate">When do you want to visit us:</label></div>
-                                <input type="text" id="bookingdate" name="booking-date"/>
-                                <div><label for ="booking-location">Which restaurant do you want to dine in:</label>
-                                </div>
-                                
+                                <input type="text" id="bookingdate" name="bookingdate"/>
+                                <div><label for ="bookinglocation">Which restaurant do you want to dine in:</label>
+                                </div>                                
                                 <select id="bookinglocation" name="bookinglocation">
                                     <option value="none">--Please select one--</option>
                                     <option value="etna">Etna</option>
                                     <option value="maunakea">Mauna Kea</option>
                                     <option value="agung">Agung</option>
                                 </select>
-                                <div><label for ="booking-quantity">How many people do you plan to go with:</label></div>
+                                <div><label for ="bookingquantity">How many people do you plan to go with:</label></div>
                                 <select id="bookingquantity" name="bookingquantity">
                                     <option value="none">--Please select one--</option> 
                                     <option value="0">I am going alone</option>
@@ -64,9 +63,20 @@
                                 <input type="text" id="visitor_email" name="visitor_email"/>
                             </div>
                         </div>
+                        <div id="error_message"></div>
                         <div id="submit-button"><button type="submit" id="submit" name="submit">Submit</button></div>
                     </form>
+                    <div id="confirm_message" class="hidden">
+                        <div>Thank you, <span id="confirm_name"></span></div>
+                        <div>Please review your reservation: </div>
+                        <div>Date of visit: <span id="confirm_date"></span></div>
+                        <div>Branch: <span id="confirm_restaurant"></span></div>
+                        <div>You will be going with <span id="confirm_bookingquantity"></span> friend(s).</div>
+                        <div>We will contact you soon at <span id="confirm_phone"></span> or at <span id="confirm_email"></span> should there be any change.</div>
+                        <div>We are looking forward to serving you.</div>
+                    </div>
                 </div>
+                
             </div>
             
         </div>

@@ -110,10 +110,12 @@ Table of Content:
     text-align:center;
     margin: 1em;
 }
-#submit-button {
+#submit-button, #error_message {
    text-align:center; 
 }
-
+.hidden {
+    display:none;
+}
 /**************************
 9. Careers
 **************************/
