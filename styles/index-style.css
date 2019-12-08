@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Libre+Franklin|Montserrat+Subrayada&display=swap&subset=latin-ext');
+html{
+    box-sizing: border-box;
+}
+body,#header,#main,#footer {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: floralwhite; 
+}
+#header{
+    height: 800px;
+    background: url(../image/volcano3.jpg) top center fixed no-repeat;
+    background-size: cover;
+    animation: backgroundScroll 20s infinite alternate; 
+    text-align: center;
+}
+@keyframes backgroundScroll {
+    0% {background-position: 0 0;}
+    100% {background-position: 0px -100px;}
+}
+#h1 {
+    margin: auto; 
+    padding-top: 18em;
+}
+h1{
+    margin: 0;
+    text-align: center;
+    font-family: 'Alex Brush', cursive;;
+    color:floralwhite;
+    font-size: 6em;
+    font-weight: 80;
+    animation: color-change 20s infinite alternate ease-out;
+    text-shadow: 2px 2px 2px #384460;
+}
+@keyframes color-change {
+    0% { color: #202128; }
+    100% { color: floralwhite; }
+}
+#lang{
+    position: absolute;
+    top: 2em;
+    right: 3em;
+}
+#scrolldown{
+    color: floralwhite;
+    margin-top: 12em;
+    font-size: 0.8em;
+}
+#nav{
+    display: none;
+}
+#header_description{
+    display: none;
+    position: absolute;
+    top: 3.5em;
+    font-size: 3em;
+    color: #384460;
+}
+
+/* main part*/
+.module{
+    height: 8em;
+    animation: backgroundScroll 30s infinite alternate; 
+    text-align: center;
+}
+.subtitle{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 3em;
+    font-weight: 80;
+    color: floralwhite;
+}
+.module_image{
+    width: 20em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#specials{
+    background: url(../image/Vesuvius-texture.jpg) top center fixed no-repeat;
+    background-size: cover;
+}
+
+
+
