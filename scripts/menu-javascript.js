@@ -14,7 +14,8 @@ function pageReady () {
     var appetizerMenu = document.getElementById("appetizer-list");
     var mainDishMenu = document.getElementById("main-dish-list");
     var dessertMenu = document.getElementById("dessert-list");
-    
+    var brunchMenu = document.getElementById("brunch-list");
+    var drinkMenu = document.getElementById("drink-list");
     
     //add Event Listener
     //onmousover
@@ -28,6 +29,10 @@ function pageReady () {
     appetizerPicture.onclick = displayMenu1;
     mainCoursePicture.onclick = displayMenu2;
     dessertPicture.onclick = displayMenu3;
+    brunchPicture.onclick = displayMenu4;
+    drinkPicture.onclick = displayMenu5;
+    
+    
     //function
     //onmousover
     function changePic1 () {
@@ -55,7 +60,12 @@ function pageReady () {
     function displayMenu3 () {
         dessertMenu.style.display="block";        
     }
-    
+    function displayMenu4 () {
+        brunchMenu.style.display="block";        
+    }
+     function displayMenu5 () {
+        drinkMenu.style.display="block";        
+    }
     
     
 }
