@@ -88,7 +88,7 @@ Table of Content:
 }
 #menu-price {
     flex:1 0 0;
-    background: url("menu-background2-01.jpg");
+    
 }
 
 /**************************
@@ -104,6 +104,14 @@ Table of Content:
 .h2Booking {
    background: #D99E50;
     text-align: center;
+}
+.booking-customer-info {
+    flex: 1 0 0;
+    text-align:center;
+    margin: 1em;
+}
+#submit-button {
+   text-align:center; 
 }
 
 /**************************

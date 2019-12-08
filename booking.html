@@ -20,11 +20,53 @@
         <div>
             <div class="event-booking">
                 <h2 class="h2Booking">Event Galery</h2>
-                <p class="booking">Some information about restaurant event here</p>
+                <div id="even" class="hidden">Some information about restaurant event here
+                
+                </div>
             </div>
             <div class="event-booking">
                 <h2 class="h2Booking">Reserve your place</h2>
-                <p class="booking">Some information about restaurant here</p>
+                    <div id="booking" class="hidden"><h3>Your memorable memory starts here</h3>
+                    <form method="post" action="#" id="booking-form">
+                        
+                        <div class="flex-container">
+                            <div class="booking-customer-info">Please enter your reservation information:
+                                <div><label for ="bookingdate">When do you want to visit us:</label></div>
+                                <input type="text" id="bookingdate" name="booking-date"/>
+                                <div><label for ="booking-location">Which restaurant do you want to dine in:</label>
+                                </div>
+                                
+                                <select id="bookinglocation" name="bookinglocation">
+                                    <option value="none">--Please select one--</option>
+                                    <option value="etna">Etna</option>
+                                    <option value="maunakea">Mauna Kea</option>
+                                    <option value="Agung">Agung</option>
+                                </select>
+                                <div><label for ="booking-quantity">How many people do you plan to go with:</label></div>
+                                <select id="bookingquantity" name="bookingquantity">
+                                    <option value="none">--Please select one--</option> 
+                                    <option value="0">I am going alone</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="More than 5">More than 5</option>
+                                    <option value="More than 10">More than 10</option>
+                                </select>
+                            </div>
+                            <div class="booking-customer-info">Please enter your contact information:
+                                <div><label for="visitor-full-name">Your full name:</label></div>
+                                <input type="text" id="visitor-full-name" />
+                                <div><label for="visitor-phone">Your phone number:</label></div>
+                                <input type="text" id="visitor-phone" />
+                                <div><label for="visitor-email">Your email:</label></div>
+                                <input type="text" id="visitor-email" />
+                            </div>
+                        </div>
+                        <div id="submit-button"><button type="submit" id="submit" name="submit">Submit</button></div>
+                    </form>
+                </div>
             </div>
             
         </div>
