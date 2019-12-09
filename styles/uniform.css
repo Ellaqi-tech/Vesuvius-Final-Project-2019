@@ -8,14 +8,20 @@ html{
 body,#uniform-header,#uniform-footer {
     margin: 0 auto;
     padding: 0;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Libre Franklin', sans-serif; /*** overall font ***/
 }
 a {
     text-decoration: none;
-    color: #3d4760;
+    color: #3d4760; /*** overall text color ***/
 }
+
 /************************* header **************************/
 #uniform-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#header-flex {
     display: flex;
     flex-flow: row wrap;
     color: #3d4760;
@@ -62,9 +68,16 @@ a {
     color: #5876b2;
     background: white;
 }
+/************************* header end **************************/
+
+
+
+/************************************* body test ********************************/ 
 #test {
-    height: 300px;
+    height: 800px;
 }
+/************************************* test end ********************************/ 
+
 
 /************************************ footer ************************************/
 #uniform-footer {
@@ -81,9 +94,11 @@ a {
 #footer-flex1 {
     flex: 1 0 0;
     text-align: center;
+    margin-right: 5%;
 }
 #footer-flex2 {
     flex: 1 0 0;
+    margin-left: 5%;
 }
 #footer-logo {
     flex: 2 0 0;
@@ -129,5 +144,5 @@ a {
     height: 50px;
     line-height: 50px;
 }
-
+/************************************* footer end ********************************/ 
 
