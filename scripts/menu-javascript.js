@@ -21,7 +21,7 @@ function menuLoad() {
     );
     //Display the menu
     $('#appetizer').click(function() {
-        $('#appetizer-list').show(2000);
+        $('#appetizer-list').show();
     });
     $('#main-course').click(function() {
         $('#main-dish-list').show();
@@ -30,7 +30,7 @@ function menuLoad() {
         $('#brunch-list').show();
     });
     $('#dessert').click(function() {
-        $('#dessert-list').show(2000);
+        $('#dessert-list').show();
     });
     $('#drink').click(function() {
         $('#drink-list').show();
