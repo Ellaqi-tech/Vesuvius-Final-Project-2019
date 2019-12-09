@@ -24,15 +24,15 @@ function menuLoad() {
         $('#appetizer-list').show(2000);
     });
     $('#main-course').click(function() {
-        $('#main-dish-list').show(2000);
+        $('#main-dish-list').show();
     });
     $('#brunch').click(function() {
-        $('#brunch-list').show(2000);
+        $('#brunch-list').show();
     });
     $('#dessert').click(function() {
         $('#dessert-list').show(2000);
     });
     $('#drink').click(function() {
-        $('#drink-list').show(2000);
+        $('#drink-list').show();
     });
 }

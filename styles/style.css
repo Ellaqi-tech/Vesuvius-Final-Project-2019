@@ -62,18 +62,59 @@ Table of Content:
 **************************/
 #main-picture {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  margin:0;
+  width: 100%;
 }
-#appetizer, #entree, #main-course, #dessert, .menu-pictures, .food-list {
+.menu-pictures, .food-list {
     flex: 1 0 0;
-    margin-left:10px;
+    text-align:center;
+    margin:0;
 }
-
+.menu-pictures img {
+    max-width:99%;
+    height: auto;
+}
+#menu {
+    max-width: 900px;
+    text-align:center;
+    flex:2 0 0;
+}
+.menu-list {
+    display:none;
+    margin: 0.5em 0.5em;
+}
+#menu-price {
+    flex:1 0 0;
+    
+}
 /**************************
 8. Booking
 **************************/
+#booking-sitename {
+    text-align: center;
+    transform: translateY(-1000%);
+    color:white;
+    font-weight:bold;
+    font-size:40px;
+}
+.h2Booking {
+   background: #D99E50;
+    text-align: center;
+}
+.booking-customer-info, .event_picture {
+    flex: 1 0 0;
+    text-align:center;
+    margin: 1em;
+}
+#submit-button, #error_message {
+   text-align:center; 
+}
+.hidden {
+    display:none;
+}
+#event, #booking {
+    text-align: center;
+}
 
 /**************************
 9. Careers
