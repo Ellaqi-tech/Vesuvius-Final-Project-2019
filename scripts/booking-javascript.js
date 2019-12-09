@@ -3,14 +3,21 @@ jQuery(document).ready(function() {
     bookingEventLoad()
 });
 function bookingEventLoad() {
+    //show and hide the booking and event div
     jQuery('.hidden').hide();
     jQuery('h2').click(function() {
         $(this).next('div').fadeToggle("5000");
-    });
-    $("#bookingdate").datepicker();
+    //create effect for the galery
     
+    });
+    $('.event_picture').hover (
+        function () {$(this).css({'box-shadow':'10px 10px 5px #888', 'background-color': 'black', 'color':'white'})},
+        function () {$(this).css({'box-shadow':'0px 0px 0px white', 'background-color':'white', 'color':'black'})}
+    );
+    $("#bookingdate").datepicker();
+     //validate the form
     var formHandle = document.forms[0];
-    //console.log(formHandle);
+   
     formHandle.onsubmit = processForm;
     function processForm () {
         var isValid = true;

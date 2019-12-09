@@ -18,14 +18,35 @@
             <div id="booking-sitename">Pompeii Restaurants Reservation</div>
         </div>
         <div>
-            <div class="event-booking">
-                <h2 class="h2Booking">Event Galery</h2>
-                <div id="even" class="hidden">Some information about restaurant event here
+            <div class="event-booking" >
+                <h2 class="h2Booking" >Event Galery</h2>
+                
+                <div id="event" class="hidden"><h3>Our treasured moments</h3><p>Since our establishment, we have become a trusted event holding location. Who wouldn't want an outdoor wedding by the mountaint? Or a friend reunion by the fireside? In Pompeii, we have all the spaces you need for your event. Here is some of the treasured moments from our customers</p>                    
+                    <div class="flex-container">
+                        <div id="wedding" class="event_picture">
+                            <img src="image/event-galery-wedding-resize.jpg" alt="A wedding held in an  restaurant"/>
+                            <p>We are honour to witness Chris and Medina's happiness in 2016.</p>
+                        </div >
+                        <div id="christmas" class="event_picture">
+                            <img src="image/event-galery-christmas.jpg" alt="A group of 4 friends raising the glass while smiling at the camera"/>
+                            <p>Jones and his friends enjoying a Christmas party at our restaurants</p>
+                        </div >
+                        <div id="concert" class="event_picture">
+                            <img src="image/event-galery-concert-reiszed.jpg" alt="A concert hall held in a restaurant" />
+                            <p>Ella and her band choose our restaurant to kick off her world tour concert in 2017</p>
+                        </div>
+                        
+                        <div id="businessparty" class="event_picture">
+                            <img src="image/event-galery-yep-resize.jpg"  alt="A group of colleagues having dinner in a restaurant"/>
+                            <p>Ossy Entertainment held their year-end party in our restaurant</p>
+                        </div>
+                        
+                    </div>
                 
                 </div>
             </div>
-            <div class="event-booking">
-                <h2 class="h2Booking">Reserve your place</h2>
+            <div class="event-booking" >
+                <h2 class="h2Booking" >Reserve your place</h2>
                     <div id="booking" class="hidden"><h3>Your memorable memory starts here</h3>
                     <form method="post" action="#" id="booking-form">
                         
@@ -37,9 +58,12 @@
                                 </div>                                
                                 <select id="bookinglocation" name="bookinglocation">
                                     <option value="none">--Please select one--</option>
-                                    <option value="etna">Etna</option>
-                                    <option value="maunakea">Mauna Kea</option>
-                                    <option value="agung">Agung</option>
+                                    <option value="kilaue">Kilaue</option>
+                                    <option value="loihi">Loihi</option>
+                                    <option value="etna">Mount Etna</option>
+                                    <option value="stromboli">Stromboli</option>
+                                    <option value="versuvius">Vesuvius</option>
+                                    <option value="versuvius">Nisyros</option>
                                 </select>
                                 <div><label for ="bookingquantity">How many people do you plan to go with:</label></div>
                                 <select id="bookingquantity" name="bookingquantity">
@@ -50,8 +74,8 @@
                                     <option value="3">3</option>
                                     <option value="3">4</option>
                                     <option value="3">5</option>
-                                    <option value="More than 5">More than 5</option>
-                                    <option value="More than 10">More than 10</option>
+                                    <option value="more than 5">More than 5</option>
+                                    <option value="more than 10">More than 10</option>
                                 </select>
                             </div>
                             <div class="booking-customer-info">Please enter your contact information:
@@ -67,8 +91,8 @@
                         <div id="submit-button"><button type="submit" id="submit" name="submit">Submit</button></div>
                     </form>
                     <div id="confirm_message" class="hidden">
-                        <div>Thank you, <span id="confirm_name"></span></div>
-                        <div>Please review your reservation: </div>
+                        <div><h2>Thank you, <span id="confirm_name"></span></h2></div>
+                        <div><h3>Please review your reservation:</h3> </div>
                         <div>Date of visit: <span id="confirm_date"></span></div>
                         <div>Branch: <span id="confirm_restaurant"></span></div>
                         <div>You will be going with <span id="confirm_bookingquantity"></span> friend(s).</div>

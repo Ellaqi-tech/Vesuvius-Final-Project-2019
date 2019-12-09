@@ -105,7 +105,7 @@ Table of Content:
    background: #D99E50;
     text-align: center;
 }
-.booking-customer-info {
+.booking-customer-info, .event_picture {
     flex: 1 0 0;
     text-align:center;
     margin: 1em;
@@ -115,6 +115,9 @@ Table of Content:
 }
 .hidden {
     display:none;
+}
+#event, #booking {
+    text-align: center;
 }
 /**************************
 9. Careers
