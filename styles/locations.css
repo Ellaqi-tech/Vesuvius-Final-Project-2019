@@ -20,6 +20,8 @@ html {
 }
 .country {
   flex: 2em 0 0;
+  text-align: center;
+  padding: 1em;
 }
 .volcano_wrapper {
   flex: 1 0 0;
@@ -28,8 +30,10 @@ html {
   margin-right: 3em;
 }
 .volcano {
-  flex: 1 0 0;
-  margin-bottom: 2em;
+  flex: 2em 0 0;
+  text-align: center;
+  padding: 1em;
+  /* margin-bottom: 2em; */
   /* display: none; */
 }
 .location_info_wrapper {
@@ -43,4 +47,8 @@ html {
 }
 .selected {
   background-color: red;
+}
+.title {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
