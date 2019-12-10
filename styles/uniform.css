@@ -20,6 +20,8 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
+    background: url(../image/uniform-header-bg.png) top center no-repeat;
+    background-size: cover;
 }
 #header-flex {
     display: flex;
@@ -36,14 +38,14 @@ a {
     text-shadow: 0 0 5px #bfcfdf;
 }
 #header-logo:hover {
-    animation: shadow-change 1s 2 alternate;
+    animation: shadow-change 0.5s 2 alternate;
 }
 @keyframes shadow-change {
   0% {
     text-shadow: 0 0 0 #bfcfdf;
   }
   100% {
-    text-shadow: 0 5px 20px #3d4760;
+    text-shadow: 0 8px 10px #212734;
   }
 }
 #header-nav {
@@ -96,7 +98,7 @@ a {
     line-height: 25px;
 }
 #footer-content {
-    background: url(../image/footer-content-bg.jpg) top center no-repeat;
+    background: url(../image/uniform-footer-bg.jpg) top center no-repeat;
     background-size: cover;
     padding: 2% 18%;
     display: flex;
@@ -150,10 +152,12 @@ a {
 }
 #footer-bottom2 {
     background: #3d4760;
-    color: #f1f1f1;
     text-align: center;
     height: 50px;
     line-height: 50px;
+}
+#footer-bottom2 a {
+    color: #f1f1f1;
 }
 /************************************* footer end ********************************/ 
 
