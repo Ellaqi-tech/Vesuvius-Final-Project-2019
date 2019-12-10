@@ -33,7 +33,18 @@ a {
     font-size: 25px;
     margin-left: 3%;
     margin-top: 1.5%;
-    text-shadow: 2px 8px 2px #bfcfdf;
+    text-shadow: 0 0 5px #bfcfdf;
+}
+#header-logo:hover {
+    animation: shadow-change 1s 2 alternate;
+}
+@keyframes shadow-change {
+  0% {
+    text-shadow: 0 0 0 #bfcfdf;
+  }
+  100% {
+    text-shadow: 0 5px 20px #3d4760;
+  }
 }
 #header-nav {
     flex: 5 0 0;
@@ -107,7 +118,7 @@ a {
     margin-left: 3%;
     margin-top: 15%;
     margin-bottom: 15%;
-    text-shadow: 2px 8px 2px #bfcfdf;
+    text-shadow: 2px 3px 2px #bfcfdf;
 }
 #footer-booking a {
     color: #f1f1f1;
@@ -128,7 +139,7 @@ a {
     color: #face01;
     font-weight: bold;
     font-size: 16px;
-    text-shadow: 1px 1px 1px #3c4556;
+    text-shadow: 0 0 1px #5876b2;
 }
 #footer-bottom1 {
     background: #334b87;
