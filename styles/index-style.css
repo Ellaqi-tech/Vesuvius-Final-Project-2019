@@ -7,6 +7,8 @@ body,#header,#main,#footer {
     padding: 0;
     font-family: 'Libre Franklin', sans-serif;
     color: #2c4379;
+    background: url(../image/volcano5.jpg) top center fixed no-repeat;
+    background-size: cover;
 }
 a{
     text-decoration: none;
@@ -35,7 +37,7 @@ h1{
     color:floralwhite;
     font-size: 6em;
     font-weight: 80;
-    animation: color-change 20s infinite alternate ease-out;
+    animation: color-change 2s infinite alternate ease-out;
     text-shadow: 2px 2px 2px #384460;
 }
 @keyframes color-change {
@@ -46,15 +48,18 @@ h1{
     position: absolute;
     top: 2em;
     right: 3em;
+    color: floralwhite;
+    font-size: 0.9em;
 }
 #scrolldown{
     color: floralwhite;
     margin-top: 12em;
     font-size: 0.8em;
 }
+/********************* nav **********************/
 #nav {
     position: absolute;
-    top: 10em;
+    top: 13em;
     right: 2.5em;
     text-align: left;
 }
@@ -62,9 +67,7 @@ h1{
     list-style: none;
     padding-bottom: 0.8em;
     font-size: 1em;
-}
-#nav ul #firstli {
-    font-size: 1.8em;
+    color: #c2d3e7;
 }
 #header_description{
     display: none;
@@ -73,12 +76,20 @@ h1{
     font-size: 3em;
     color: #384460;
 }
-
-#reservation {
-    width: 20em;
-    border: 1.5px solid green;
+/*********************** reservation ********************/
+#reservation a {
+    display: block;
+    width: 12em;
+    height: 1em;
+    padding: 0.8em 0;
+    border: 1.5px solid #384460;
     text-align: center;
+    line-height: 1em;
     margin: 2em auto;
+    background: rgb(255, 255, 255, 0.7);
+}
+#reservation a:hover {
+    background: rgb(255, 255, 255, 1); 
 }
 /****************************** main part ******************************************/
 #main {
@@ -123,6 +134,9 @@ h1{
     padding: 0.6em 0;
     margin: 2em auto;
     border: 1px solid #2c4379;
+}
+.subtitle a:hover {
+    background: white;
 }
 .food_img {
     flex: 1 0 0;
