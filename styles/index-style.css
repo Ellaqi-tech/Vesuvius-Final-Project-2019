@@ -13,7 +13,7 @@ a{
     text-decoration: none;
     /* color: inherit; */
 }
-/************************************* header *********************************************/
+/************************************* header ************************************/
 #header{
     height: 800px;
     background: url(../image/volcano3.jpg) top center fixed no-repeat;
@@ -179,6 +179,43 @@ h1{
 .module h2 {
     padding-top: 2em; 
 }
-
-
-
+#sitemap {
+    width: 95%;
+    padding-bottom: 2em;
+    margin: 1em auto;
+    text-align: center;
+    color: #384460;
+}
+#site-homepage {
+    width: 30%;
+    padding: 0.6em;
+    margin: 2em auto; 
+    font-size: 2em;
+    background: rgb(255, 255, 255, 0.6);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#site-map {
+    font-size: 0.6em;
+    padding-top: 1em;
+    font-weight: bold;
+}
+#site-flexcontainer {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    padding-top: 2em;
+    border-top: 2px solid #384460;
+}
+.sites {
+    padding: 0.3em ;
+    flex: 1 0 0;
+    font-size: 1.2em;
+    line-height: 2em;
+    font-weight: bold;
+    background: rgb(255, 255, 255, 0.6);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#site-flexcontainer span {
+    color: #f36701;
+    font-size: 1.3em;
+}
