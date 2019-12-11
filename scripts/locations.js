@@ -1,4 +1,5 @@
 window.onload = function() {
+<<<<<<< Updated upstream
   // $(".italy").click(function(){
   //   $(".country").removeClass("selected");
   //   $(".italy").addClass("selected");
@@ -18,6 +19,8 @@ window.onload = function() {
   //   $('.greece_locations').show();
   // });
 
+=======
+>>>>>>> Stashed changes
   $(".country_loc").click(function(){
     $(".country_loc").removeClass("selected");
     $(this).addClass("selected");
