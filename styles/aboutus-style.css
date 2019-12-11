@@ -1,0 +1,39 @@
+html{
+    box-sizing: border-box;
+}
+body,#header,#main,#footer {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    background: url(../image/volcano5.jpg) top center fixed no-repeat;
+    background-size: cover;
+    color: #384460;
+    font-size: 1.2em;
+}
+a{
+    text-decoration: none;
+    /* color: inherit; */
+}
+a:hover {
+    color: floralwhite;
+}
+#flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10em;
+    padding-bottom: 5em;
+}
+#intro {
+    flex: 2 0 0;
+    line-height: 1.8em;
+}
+#link {
+    flex: 1 0 0;
+    padding-top: 3em;
+    padding-left: 10em;
+}
+#link li {
+    padding: 0.5em;
+}
