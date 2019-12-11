@@ -1,0 +1,37 @@
+.flex-container {
+	display:flex;
+    flex-flow: row wrap;
+}
+.flex-container > * {
+	flex: 1 0 0;
+}
+booking-sitename {
+    text-align: center;
+    transform: translateY(-1000%);
+    color:white;
+    font-weight:bold;
+    font-size:40px;
+}
+.h2Booking {
+   background: #D99E50;
+    text-align: center;
+}
+.booking-customer-info, .event_picture, . event_info {
+    flex: 1 0 0;
+    text-align:center;
+    margin: 1em;
+}
+#submit-button, #error_message {
+    text-align:center;
+    margin:1em 0 1em;
+}
+.hidden {
+    display:none;
+}
+#event, #booking {
+    text-align: center;
+}
+#event_request {
+    width:80%;
+    height:70px;
+}
