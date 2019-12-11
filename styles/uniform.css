@@ -5,6 +5,10 @@
 html{
     box-sizing: border-box;
 }
+body { /** here's the body background **/
+    background: url(../image/volcano5.jpg) top center fixed no-repeat;
+    background-size: cover;
+}
 body,#uniform-header,#uniform-footer {
     margin: 0 auto;
     padding: 0;
@@ -149,6 +153,7 @@ a {
     text-align: center;
     height: 50px;
     line-height: 50px;
+    font-size: 16px;
 }
 #footer-bottom2 {
     background: #3d4760;
@@ -156,9 +161,10 @@ a {
     height: 50px;
     line-height: 50px;
     color: #f1f1f1 !important;
+    font-size: 16px;
 }
 #footer-bottom2 a:link {
     color: #f1f1f1 ;
 }
-/************************************* footer end ********************************/ 
+/**************************** footer end *****************************/ 
 
