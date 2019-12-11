@@ -1,0 +1,180 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Pompeii Restaurant Booking</title>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">        
+        <link rel="stylesheet" type="text/css" href="lib/jquery-ui.css">
+		<script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="lib/jquery-ui.js"></script>
+        <script type="text/javascript" src="scripts/booking-javascript.js" ></script>
+    </head>
+    <body>
+        <!-- ********************* header *********************** -->
+        <header id="uniform-header">
+            <div id="header-flex" class="top-bar fixed">
+                <div id="header-logo"><a href="index.html">Pompeii BBQ</a></div>
+                <div id="header-nav">
+                <ul>
+                    <li><a href="index.html">WELCOME</a></li>
+                    <li><a href="about-us.html">ABOUT</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contest.html">CONTEST</a></li>
+                    <li><a href="contact-us.html">CONTACT</a></li>
+                </ul>
+                </div>
+                <div id="header-booking"><a href="booking.html">MAKE A RESERVATION</a></div>
+            </div>
+        </header>
+        <!-- ********************* header end ******************* -->
+        
+        <div>
+            <img src="image/booking-restaurant.png" alt="A mountain view of a restaurant"/>
+            <div id="booking-sitename">Pompeii Restaurants Reservation</div>
+        </div>
+        <div>
+            <div class="event-booking" >
+                <h2 class="h2Booking" >Event Galery</h2>
+                
+                <div id="event" class="hidden"><h3>Our treasured moments</h3><p>Since our establishment, we have become a trusted event holding location. Who wouldn't want an outdoor wedding by the mountaint? Or a friend reunion by the fireside? In Pompeii, we have all the spaces you need for your event. Here is some of the treasured moments from our customers</p>                    
+                    <div class="flex-container">
+                        <div id="wedding" class="event_picture">
+                            <img src="image/event-galery-wedding-resize.jpg" alt="A wedding held in an  restaurant"/>
+                            <p>We are honour to witness Chris and Medina's happiness in 2016.</p>
+                        </div >
+                        <div id="christmas" class="event_picture">
+                            <img src="image/event-galery-christmas.jpg" alt="A group of 4 friends raising the glass while smiling at the camera"/>
+                            <p>Jones and his friends enjoying a Christmas party at our restaurants</p>
+                        </div >
+                        <div id="concert" class="event_picture">
+                            <img src="image/event-galery-concert-reiszed.jpg" alt="A concert hall held in a restaurant" />
+                            <p>Ella and her band choose our restaurant to kick off her world tour concert in 2017</p>
+                        </div>
+                        
+                        <div id="businessparty" class="event_picture">
+                            <img src="image/event-galery-yep-resize.jpg"  alt="A group of colleagues having dinner in a restaurant"/>
+                            <p>Ossy Entertainment held their year-end party in our restaurant</p>
+                        </div>
+                        
+                    </div>
+                
+                </div>
+            </div>
+            <div class="event-booking" >
+                <h2 class="h2Booking" >Reserve your place</h2>
+                    <div id="booking" class="hidden"><h3>Your memorable memory starts here</h3>
+                    <form method="post" action="#" id="booking-form">
+                        
+                        <div class="flex-container">
+                            <div class="booking-customer-info"><h3>Please enter your reservation information:</h3>
+                                <div><label for ="bookingdate">When do you want to visit us:</label></div>
+                                <input type="text" id="bookingdate" name="bookingdate"/>
+                                <div><label for ="bookinglocation">Which restaurant do you want to dine in:</label>
+                                </div>                                
+                                <select id="bookinglocation" name="bookinglocation">
+                                    <option value="none">--Please select one--</option>
+                                    <option value="kilaue">Kilaue</option>
+                                    <option value="loihi">Loihi</option>
+                                    <option value="etna">Mount Etna</option>
+                                    <option value="stromboli">Stromboli</option>
+                                    <option value="versuvius">Vesuvius</option>
+                                    <option value="versuvius">Nisyros</option>
+                                </select>
+                                <div><label for ="bookingquantity">How many people do you plan to go with:</label></div>
+                                <select id="bookingquantity" name="bookingquantity">
+                                    <option value="none">--Please select one--</option> 
+                                    <option value="0">I am going alone</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="more than 5">More than 5</option>
+                                    <option value="more than 10">More than 10</option>
+                                </select>
+                            </div>
+                            <div class="event_info"><h3>Please enter your event/dining requirement:</h3>
+                                <div><label for ="event_type">Which type of dining experience do you want to organize in our restaurant:</label>
+                                </div>                                
+                                <div><select id="event_type" name="event_type">
+                                    <option value="none">--Please select one--</option>
+                                    <option value="dinning">Just a simple dinner/lunch</option>
+                                    <option value="wedding">Wedding</option>
+                                    <option value="private Party">Private party</option>
+                                    <option value="others">Others</option>
+                                </select></div>
+                                <div>
+                                    <div ><label for ="other_event_type">If you choose other, please specify:</label></div>
+                                    <input type="text" id="other_event_type" name="other_event_type"/>
+                                </div>
+                                <div>
+                                    <div><label for="event_request">If you have any special request, please specify:</label>
+                                    </div>
+                                    <textarea id="event_request" name="event_request"></textarea>
+                                </div>
+                            </div>
+                                 
+                            <div class="booking-customer-info"><h3>Please enter your contact information:</h3>
+                                <div><label for="visitor_full_name">Your name:</label></div>
+                                <input type="text" id="visitor_full_name" name="visitor_full_name"/>
+                                <div><label for="visitor_phone">Your phone number:</label></div>
+                                <input type="text" id="visitor_phone" name="visitor_phone"/>
+                                <div><label for="visitor_email">Your email:</label></div>
+                                <input type="text" id="visitor_email" name="visitor_email"/>
+                            </div>
+                        </div>
+                        <div id="error_message"></div>
+                        <div id="submit-button"><button type="submit" id="submit" name="submit">Submit</button></div>
+                    </form>
+                    <div id="confirm_message" class="hidden">
+                        <div><h2>Thank you, <span id="confirm_name"></span></h2></div>
+                        <div><h3>Please review your reservation:</h3> </div>
+                        <div>Date of visit: <span id="confirm_date"></span></div>
+                        <div>Branch: <span id="confirm_restaurant"></span></div>
+                        <div>You will be going with <span id="confirm_bookingquantity"></span> friend(s).</div>
+                        <div>Your event/dining experice is: <span id="confirm_event_type"></span></div>
+                        <div id="special_request">Your special request is: <span id="confirm_special_request"></span> </div>
+                        <div>We will contact you soon at <span id="confirm_phone"></span> or at <span id="confirm_email"></span> should there be any change.</div>
+                        <div>We are looking forward to serving you.</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <!-- ********************* footer *********************** -->
+        <footer id="uniform-footer">
+            <div id="footer-content">
+                <div id="footer-flex1">
+                    <div id="footer-logo"><a href="index.html">Pompeii BBQ</a></div>
+                    <div id="footer-booking"><a href="booking.html">MAKE A RESERVATION</a></div>
+                    <div id="footer-tel">Tel.  (416) 675-3111<br>Email.   VESUVIUS@webdeveloper.com</div>
+                </div>
+                <div id="footer-flex2">
+                    <div id="footer-time">
+                    <p><span class="footer-timeslot">LUNCH</span><br>
+                        Friday, Saturday & Sunday:<br>
+                        Bookings from 12pm – 1.30pm<br>
+                        Thursdays in December
+                    </p>
+                    <p><span class="footer-timeslot">DINNER </span><br>
+                    Daily: Bookings from 6pm – 9pm</p>
+                    <p><span class="footer-timeslot">CHRISTMAS DAY</span><br>
+                    Open lunch</p>
+                    <p><span class="footer-timeslot">EVENTS</span><br>
+                    Lunch: Monday to Sunday from 12pm<br>
+                    Dinner: Monday to Sunday from 6pm</p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-bottom1">
+            Pompeii BBQ Restaurant 2019. ALL RIGHTS RESERVED
+            </div>
+            <div id="footer-bottom2"><a href="https://github.com/Yusha16/Vesuvius-Final-Project-2019">
+            DESIGNED BY TEAM VESUVIUS <span id="footerspan">- Christopher Maeda - Christopher Jones - Oswaldo Meza Brun - Paul Tran - Ella Qi</span></a>
+            </div>
+        </footer>
+        <!-- ********************* footer end *********************** -->
+    </body>
+</html>

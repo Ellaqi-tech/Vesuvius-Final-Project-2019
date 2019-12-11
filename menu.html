@@ -3,102 +3,201 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Pompeii Restaurant Menu</title>
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">        
+        <link rel="stylesheet" type="text/css" href="lib/jquery-ui.css">
+		<script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="lib/jquery-ui.js"></script>
         <script type="text/javascript" src="scripts/menu-javascript.js" ></script>
     </head>
     <body>
-        <header>
-        
+        <!-- ********************* header *********************** -->
+        <header id="uniform-header">
+            <div id="header-flex" class="top-bar fixed">
+                <div id="header-logo"><a href="index.html">Pompeii BBQ</a></div>
+                <div id="header-nav">
+                <ul>
+                    <li><a href="index.html">WELCOME</a></li>
+                    <li><a href="about-us.html">ABOUT</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contest.html">CONTEST</a></li>
+                    <li><a href="contact-us.html">CONTACT</a></li>
+                </ul>
+                </div>
+                <div id="header-booking"><a href="booking.html">MAKE A RESERVATION</a></div>
+            </div>
         </header>
-        <main>
-            <div id="menu">
-                <div><img id="main-picture" src="image/moutain-view-restaurant.jpg" /></div>
-                <div class="flex-container">
-                    <div id="appetizer" class="menu-pictures">
-                        <img src="image/appetizer.jpg" />
-                        <div>Appertizer</div>
+  
+           <div class="flex-container"> 
+                <div id="menu">
+                    <div><img id="main-picture" src="image/moutain-view-restaurant.jpg" /></div>
+                    <div class="flex-container">                        
+                        <div id="appetizer" class="menu-pictures">
+                            <img src="image/appetizer.jpg" />
+                            <div>Appertizer</div>
+                        </div>
+                        <div id="main-course" class="menu-pictures">
+                            <img src="image/main-course.jpg" />
+                            <div>Main course</div>
+                        </div>
+                        <div id="brunch" class="menu-pictures">
+                            <img src="image/brunch.jpg" />
+                            <div>All-day brunch</div>
+                        </div>
+                        <div id="dessert" class="menu-pictures">
+                            <img src="image/dessert.jpg" />
+                            <div>Dessert</div>
+                        </div>
+                        <div id="drink" class="menu-pictures">
+                            <img src="image/drink.jpg" />
+                            <div>Drink</div>
+                        </div>
                     </div>
-                    <!--<div id="entree" class="menu-pictures">
-                        <img src="image/entree.jpg" />
-                        <div>Entree</div>
-                    </div>-->
-                    <div id="main-course" class="menu-pictures">
-                        <img src="image/main-course.jpg" />
-                        <div>Main course</div>
+                </div>
+                <div id="menu-price">
+                    <section id="appetizer-list" class="menu-list">
+                        <div><h2>Appetizer</h2></div>
+                        <div class="flex-container">
+                            <div id="side-dish" class="food-list">
+                                <div>Side dish</div>
+                                <div>Onion Rings......$4.39</div>
+                                <div>Garlic bread......$2.99</div>
+                                <div>Mac &amp; Chesse......$3.39</div>
+                            </div>
+                            <div id="soup" class="food-list">
+                                <div>Soup</div>
+                                <div>Wonton Soup......$5.99</div>
+                                <div>Pompeii Lava Soup......$6.99</div>
+                                <div>Pompeii Crab Soup......$7.99</div>
+                            </div>
+                            <div id="combo" class="food-list">
+                                <div>Combo</div>
+                                <div>Appetizer Combo......$8.99</div>
+                                
+                            </div>
+                        </div>
+                    </section>
+                    <section id="main-dish-list" class="menu-list">
+                        <div><h2>Main Course</h2></div>
+                        <div class="flex-container">
+                            <div id="beef" class="food-list">
+                                <div>Beef</div>
+                                <div>Hawaii tomahawk......$16.99</div>
+                                <div>Pompeii Brisket.......$21.99</div>
+                            </div>
+                            <div id="chicken" class="food-list">
+                                <div>Chicken</div>
+                                <div>Jeju Fried Chicken......$14.99</div>
+                                <div>Pompeii Chicken......$19.99</div>
+                            </div>
+                            <div id="pork" class="food-list">
+                                <div>Pork</div>
+                                <div>Grilled Baby Rib......$15.99</div>
+                                <div>Pork Belly on Fire......$20.99</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="brunch-list" class="menu-list">
+                        <div><h2>All day brunch</h2></div>
+                        <div class="flex-container">
+                            <div id="toast" class="food-list">
+                                <div>Toast</div>
+                                <div>French toast......$7.29</div>
+                                <div>Belgian Waffle......$6.39</div>
+                                <div>Buttermilk Pancakes......$8.29</div>
+                            </div>
+                            <div id="egg-dishes" class="food-list">
+                                <div>Egg dishes</div>
+                                <div>Scambled Egg......$5.99</div>
+                                <div>Egg Benedict......$6.99</div>
+                                <div>French Omelet......$7.99</div>
+                            </div>
+                            <div id="brunch-specials" class="food-list">
+                                <div>Brunch specials</div>
+                                <div>Tofu Scramble......$8.99</div>
+                                <div>Roasted Turkey......$10.99</div>
+                                <div>Chicken Salad......$11.99</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="dessert-list" class="menu-list">
+                        <div><h2>Dessert</h2></div>
+                        <div class="flex-container">
+                            <div id="cake" class="food-list">
+                                <div>Cake</div>
+                                <div>Pompeii Lava Cake.......$4.99</div>
+                                <div>Chesse Cake......$5.99</div>
+                                <div>Lemon Tart......$3.99</div>
+                            </div>
+                            <div id="gelato" class="food-list">
+                                <div>Gelato</div>
+                                <div>Hazelnut Gelato......$5.99</div>
+                                <div>Strawbery Gelato......$3.99</div>
+                                <div>Almond Gelato......$4.99</div>
+                            </div>
+                            <div id="fruit" class="food-list">
+                                <div>Fruits</div>
+                                <div>Mixed volcanic fruits......$3.99</div>
+                                <div>Smoothie of your choice......$5.99</div>
+                            </div>
+                        </div>                        
+                    </section>
+                    <section id="drink-list" class="menu-list">
+                        <div><h2>Drinks</h2></div>
+                        <div class="flex-container">
+                            <div id="soft-drinks" class="food-list">
+                                <div>Soft drink</div>
+                                <div>Coca-Cola......$2.99</div>
+                                <div>Dr. Pepper......$3.99</div>
+                                <div>Pepsi......$2.99</div>
+                            </div>
+                            <div id="beer-wine" class="food-list">
+                                <div>Beer and wine</div>
+                                <div>Budweiser......$5.99</div>
+                                <div>Sauvignon wine......$7.99</div>
+                                <div>Apple Cider......$8.99</div>
+                            </div>
+                            <div id="cocktail" class="food-list">
+                                <div>Cocktail</div>
+                                <div>Curacao Punch......$8.99</div>
+                                <div>Singapore Sling......$7.99</div>
+                                <div>Boilermaker......$10.99</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+        </div>
+        <!-- ********************* footer *********************** -->
+        <footer id="uniform-footer">
+            <div id="footer-content">
+                <div id="footer-flex1">
+                    <div id="footer-logo"><a href="index.html">Pompeii BBQ</a></div>
+                    <div id="footer-booking"><a href="booking.html">MAKE A RESERVATION</a></div>
+                    <div id="footer-tel">Tel.  (416) 675-3111<br>Email.   VESUVIUS@webdeveloper.com</div>
+                </div>
+                <div id="footer-flex2">
+                    <div id="footer-time">
+                    <p><span class="footer-timeslot">LUNCH</span><br>
+                        Friday, Saturday & Sunday:<br>
+                        Bookings from 12pm – 1.30pm<br>
+                        Thursdays in December
+                    </p>
+                    <p><span class="footer-timeslot">DINNER </span><br>
+                    Daily: Bookings from 6pm – 9pm</p>
+                    <p><span class="footer-timeslot">CHRISTMAS DAY</span><br>
+                    Open lunch</p>
+                    <p><span class="footer-timeslot">EVENTS</span><br>
+                    Lunch: Monday to Sunday from 12pm<br>
+                    Dinner: Monday to Sunday from 6pm</p>
                     </div>
-                    <div id="dessert" class="menu-pictures">
-                        <img src="image/dessert.jpg" />
-                        <div>Dessert</div>
-                    </div>
                 </div>
             </div>
-        </main>
-        <section id="appetizer-list">
-            <div class="flex-container">
-                <div id="side-dish" class="food-list">
-                    <div>Side dish</div>
-                    <div>Onion Rings......$4.39</div>
-                    <div>Chesse fries.......$3.49</div> 
-                    <div>Garlic bread......$2.19</div>
-                    <div>Mac &amp; Chesse......$3.39</div>
-                </div>
-                <div id="soup" class="food-list">
-                    <div>Soup</div>
-                    <div>Wonton Soup......$5.99</div>
-                    <div>Pompeii Lava Soup......$6.99</div>
-                    <div>Pompeii Crab Soup......$7.99</div>
-                </div>
-                <div id="combo" class="food-list">
-                    <div>Combo</div>
-                    <div>Appetizer Combo......$8.99</div>
-                    <div>Mushrooms, onion rings and cheese stick</div>
-                    <div>Vegetable Combo.......$7.99</div>
-                    <div>Grilled mushroom, zuchini and cauliflower</div>
-                </div>
+               <div id="footer-bottom1">
+            Pompeii BBQ Restaurant 2019. ALL RIGHTS RESERVED
             </div>
-        </section>
-        <section id="main-dish">
-            <div class="flex-container">
-                <div id="beef" class="food-list">
-                    <div>Beef</div>
-                    <div>Tomahawk ribs in Hawaiian sauce......$16.99</div>
-                    <div>Pompeii Brisket Dinner.......$21.99</div>
-                </div>
-                <div id="chicken" class="food-list">
-                    <div>Chicken</div>
-                    <div>Jeju Cheese BBQ Special Chicken......$14.99</div>
-                    <div>Pompeii Honey BBQ Chicken......$19.99</div>
-                </div>
-                <div id="pork" class="food-list">
-                    <div>Pork</div>
-                    <div>BBQ Baby Ribs in Haitian sauce......$15.99</div>
-                    <div>Pompeii Pork Belly on Fire......$20.99</div>
-                </div>
+            <div id="footer-bottom2"><a href="https://github.com/Yusha16/Vesuvius-Final-Project-2019">
+            DESIGNED BY TEAM VESUVIUS <span id="footerspan">- Christopher Maeda - Christopher Jones - Oswaldo Meza Brun - Paul Tran - Ella Qi</span></a>
             </div>
-        </section>
-        <section id="dessert">
-            <div class="flex-container">
-                <div id="dessert" class="food-list">
-                    <div>Dessert</div>
-                    <div>Pompeii Lava Cake.......$4.99</div>
-                    <div>Chesse Cake......$5.99</div>
-                    <div>Italian Gelato......$3.99</div>
-                </div>
-                <div id="Drink" class="food-list">
-                    <div>Drinks</div>
-                    <div>Soft drink......$2.99</div>
-                    <div>Beer......$3.99</div>
-                    <div>Rhum......$2.99</div>
-                </div>
-                <div id="fruit" class="food-list">
-                    <div>Fruits</div>
-                    <div>A bowl of volcanic tropical fruit......$3.99</div>
-                    <div>Any smoothie of your choice......$5.99</div>
-                </div>
-            </div>
-        </section>
-        <footer>
-            Pompeii restaurant Project
         </footer>
+        <!-- ********************* footer end *********************** -->
     </body>
 </html>

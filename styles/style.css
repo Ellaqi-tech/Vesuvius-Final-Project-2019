@@ -17,6 +17,7 @@ Table of Content:
 /**************************
 1. General Styles
 **************************/
+
 .flex-container {
 	display:flex;
     flex-flow: row wrap;
@@ -35,7 +36,8 @@ Table of Content:
 /**************************
 4. Contact Us
 **************************/
-#contact-form {
+
+/*#contact-form {
     flex-flow: column wrap;
 }
 #contact-form-method {
@@ -46,7 +48,7 @@ Table of Content:
 }
 #contact-form {
 	display: none;
-}
+}*/
 /**************************
 5. Gift Cards
 **************************/
@@ -60,18 +62,70 @@ Table of Content:
 **************************/
 #main-picture {
   display: block;
+
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  margin:0;
+  width: 100%;
 }
 #appetizer, #entree, #main-course, #dessert, .menu-pictures, .food-list {
     flex: 1 0 0;
-    margin-left:10px;
+    text-align:center;
+    margin:0;
 }
-
+.menu-pictures img {
+    max-width:99%;
+    height: auto;
+}
+#menu {
+    max-width: 900px;
+    text-align:center;
+    flex:2 0 0;
+}
+.menu-list {
+    display:none;
+    margin: 0.5em 0.5em;
+}
+#menu-price {
+    flex:1 0 0;
+}
 /**************************
 8. Booking
 **************************/
+#booking-sitename {
+    text-align: center;
+    transform: translateY(-1000%);
+    color:white;
+    font-weight:bold;
+    font-size:40px;
+}
+.h2Booking {
+   background: #D99E50;
+    text-align: center;
+}
+.booking-customer-info, .event_picture, . event_info {
+    flex: 1 0 0;
+    text-align:center;
+    margin: 1em;
+}
+#submit-button, #error_message {
+    text-align:center;
+    margin:1em 0 1em;
+}
+.hidden {
+    display:none;
+}
+#event, #booking {
+    text-align: center;
+}
+#event_request {
+    width:80%;
+    height:70px;
+}
+/*#special_request {
+    display: none;
+}*/
 
 /**************************
 9. Careers
@@ -88,6 +142,7 @@ Table of Content:
 .result-job-detail {
 	flex: 1 0 100%;
 }
+
 /**************************
 10. Site Map
 **************************/
