@@ -15,25 +15,26 @@ function bookingEventLoad() {
         function () {$(this).css({'box-shadow':'0px 0px 0px white', 'background-color':'white', 'color':'black'})}
     );
     $("#bookingdate").datepicker();
+    
      //validate the form
     var formHandle = document.forms[0];
    
     formHandle.onsubmit = processForm;
     function processForm () {
         var isValid = true;
+        
         //validate the date
         var bookingDate = formHandle.bookingdate;
         //console.log(bookingDate);
         var regexDate = /^[0,1]?\d{1}\/(([0-2]?\d{1})|([3][0,1]{1}))\/(([1]{1}[9]{1}[9]{1}\d{1})|([2-9]{1}\d{3}))$/
         //This regex is retrieved from Reg Ex library, modified by Paul Tran for education purpose
-        if (bookingDate.value === "" || bookingDate.value === null || !regexDate.test(bookingDate.value)) {
-            //bookingDateErr.innerHTML = "Please enter your date of visit";
+        if (bookingDate.value === "" || bookingDate.value === null || !regexDate.test(bookingDate.value)) {           
             isValid= false;
             bookingDate.focus();
             
         }
         
-        //validate dropdown list
+        //validate location dropdown list
         var bookingLocation = formHandle.bookinglocation;
         var bookingQuantity = formHandle.bookingquantity;
         var errorMsg = document.getElementById("error_message");
@@ -42,8 +43,7 @@ function bookingEventLoad() {
         if (bookingLocation.value === "none") {
             isValid= false;
             errorMsg.innerHTML += "<div>Please choose your prefered location</div>";
-            bookingLocation.focus();              
-            //return false;
+            bookingLocation.focus();
         }
                
          if (bookingQuantity.value === "none") {
@@ -51,6 +51,19 @@ function bookingEventLoad() {
             errorMsg.innerHTML += "<div>Please specify the number of guests</div>";
             bookingQuantity.focus();
             //return false;
+        }
+        
+        //validate event type
+        var eventType = formHandle.event_type;
+        var otherEvent = formHandle.other_event_type;
+        var eventRequest = formHandle.event_request;
+        console.log(otherEvent);
+        if (eventType.value === "none") {
+            isValid= false;
+            errorMsg.innerHTML += "<div>Please specify your type of dining experience</div>";
+        }
+        if (eventType.value === "others" && (otherEvent.value === null || otherEvent.value === "")) {
+            errorMsg.innerHTML += "<div>Please specify your type of dining experience</div>";
         }
         //validate name
         var visitorFullName = formHandle.visitor_full_name;
@@ -89,7 +102,10 @@ function bookingEventLoad() {
         var confirmQuantity = document.getElementById("confirm_bookingquantity");
         var confirmPhone = document.getElementById("confirm_phone");
         var confirmEmail = document.getElementById("confirm_email");
-        console.log(confirmMsg);
+        var confirmEventType = document.getElementById("confirm_event_type");
+        var specialRequest = document.getElementById("special_request");
+        var confirmSpecialRequest = document.getElementById("confirm_special_request");
+        //console.log(confirmMsg);
         if (isValid) {
             formHandle.style.display = "none";
             confirmMsg.style.display = "block"
@@ -97,6 +113,17 @@ function bookingEventLoad() {
             confirmDate.innerHTML = bookingDate.value;
             confirmRestaurant.innerHTML = bookingLocation.options[bookingLocation.selectedIndex].text;
             confirmQuantity.innerHTML = bookingQuantity.value;
+            if (eventType.value !== "others") {
+                 confirmEventType.innerHTML = eventType.value;             
+            }
+            else {
+                confirmEventType.innerHTML = otherEvent.value;
+            }
+            if (eventRequest.value !== null || eventRequest.value !== "") {
+                specialRequest.style.display = "block";
+                confirmSpecialRequest.innerHTML = eventRequest.value;
+            }
+           
             confirmPhone.innerHTML = visitorPhone.value;    
             confirmEmail.innerHTML = visitorEmail.value;           
         }
