@@ -63,6 +63,7 @@ function bookingEventLoad() {
             errorMsg.innerHTML += "<div>Please specify your type of dining experience</div>";
         }
         if (eventType.value === "others" && (otherEvent.value === null || otherEvent.value === "")) {
+            isValid= false;
             errorMsg.innerHTML += "<div>Please specify your type of dining experience</div>";
         }
         //validate name
@@ -113,17 +114,21 @@ function bookingEventLoad() {
             confirmDate.innerHTML = bookingDate.value;
             confirmRestaurant.innerHTML = bookingLocation.options[bookingLocation.selectedIndex].text;
             confirmQuantity.innerHTML = bookingQuantity.value;
-            if (eventType.value !== "others") {
-                 confirmEventType.innerHTML = eventType.value;             
+            if (eventType.value == "others") {
+                 confirmEventType.innerHTML = otherEvent.value;             
             }
             else {
-                confirmEventType.innerHTML = otherEvent.value;
+                confirmEventType.innerHTML = eventType.value;
             }
+            
             if (eventRequest.value !== null || eventRequest.value !== "") {
                 specialRequest.style.display = "block";
                 confirmSpecialRequest.innerHTML = eventRequest.value;
             }
-           
+            if (eventRequest.value == null || eventRequest.value == "") {
+                specialRequest.style.display = "none";
+                //confirmSpecialRequest.innerHTML = "You have no special request";
+            }
             confirmPhone.innerHTML = visitorPhone.value;    
             confirmEmail.innerHTML = visitorEmail.value;           
         }

@@ -37,7 +37,7 @@ Table of Content:
 4. Contact Us
 **************************/
 
-#contact-form {
+/*#contact-form {
     flex-flow: column wrap;
 }
 #contact-form-method {
@@ -48,7 +48,7 @@ Table of Content:
 }
 #contact-form {
 	display: none;
-}
+}*/
 /**************************
 5. Gift Cards
 **************************/
@@ -120,14 +120,14 @@ Table of Content:
     width:80%;
     height:70px;
 }
-#special_request {
-    display:none;
-}
+/*#special_request {
+    display: none;
+}*/
 
 /**************************
 9. Careers
 **************************/	
-#quick-search-job {
+/*#quick-search-job {
 	flex: 1 0 100%;
 }
 #result-job {
@@ -138,7 +138,7 @@ Table of Content:
 }
 .result-job-detail {
 	flex: 1 0 100%;
-}
+}*/
 /**************************
 10. Site Map
 **************************/
