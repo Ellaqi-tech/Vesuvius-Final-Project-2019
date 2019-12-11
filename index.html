@@ -5,9 +5,12 @@
         <title> Pompeii BBQ </title>
         <link rel="stylesheet" type="text/css" href="styles/index-style.css">
         <link rel="stylesheet" type="text/css" href="styles/uniform.css">
+        <script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="scripts/index-jquery-script.js" ></script>
     </head>
     <body>
-        <header id="uniform-header">
+        <!-- ***************** uniform header ********************* -->
+        <header id="uniform-header" style="display: none">
             <div id="header-flex" class="top-bar fixed">
                 <div id="header-logo"><a href="index.html">Pompeii BBQ</a></div>
                 <div id="header-nav">
@@ -22,24 +25,26 @@
                 <div id="header-booking"><a href="booking.html">MAKE A RESERVATION</a></div>
             </div>
         </header>
+        <!-- ***************** uniform header end ********************* -->
+        
         <section id="header">
             <div id="h1"><h1>Pompeii BBQ<span style="display: block;">Restaurant</span></h1></div>
             <nav id="nav">
                 <ul>
-                    <li id="firstli"><a href="">Specials</a></li>
-                    <li><a href="">Menu</a></li>
-                    <li><a href="">Events/<br>Booking</a></li>
-                    <li><a href="">Gift Cards</a></li>
-                    <li><a href="">Contest</a></li>
-                    <li><a href="">Careers</a></li>
-                    <li><a href="">Location</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Site Map</a></li>
+                    <li><a href="specials.html">Specials</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="booking.html">Events/<br>Booking</a></li>
+                    <li><a href="gift-cards.html">Gift Cards</a></li>
+                    <li><a href="contest.html">Contest</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="locations.html">Location</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="site-map.html">Site Map</a></li>
                 </ul>
             </nav>
             <div id="lang"><a href="">FRENCH</a></div>
             <div id="header_description">
-                <p>Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description </p>
+                <p><span>Pompeii BBQ</span><br>A global restaurant network that is situated at the foot of active volcanoes. Come to enjoy our delicious by the fire (literally)!</p>
             </div>
             <div id="scrolldown"> SCROLL DOWN </div>
         </section>
@@ -47,6 +52,7 @@
         
         <div id="reservation"><h2><a href="booking.html">Make A Reservation</a></h2></div>
         
+        <!--******************************** main ************************ -->
         <main id="main">
             <div id="specials" class="module">
                 <div class="subtitle">
@@ -97,7 +103,8 @@
             
         </main>
         
-                <footer id="uniform-footer">
+        <!-- ******************* uniform footer ************************** -->
+        <footer id="uniform-footer">
             <div id="footer-content">
                 <div id="footer-flex1">
                     <div id="footer-logo"><a href="index.html">Pompeii BBQ</a></div>
@@ -124,8 +131,8 @@
             <div id="footer-bottom1">
             Pompeii BBQ Restaurant 2019. ALL RIGHTS RESERVED
             </div>
-            <div id="footer-bottom2">
-            DESIGNED BY TEAM VESUVIUS <span id="footerspan">- Christopher Maeda - Christopher Jones - Oswaldo Meza Brun - Paul Tran - Ella Qi</span>
+            <div id="footer-bottom2"><a href="https://github.com/Yusha16/Vesuvius-Final-Project-2019">
+            DESIGNED BY TEAM VESUVIUS <span id="footerspan">- Christopher Maeda - Christopher Jones - Oswaldo Meza Brun - Paul Tran - Ella Qi</span></a>
             </div>
         </footer>
     </body>

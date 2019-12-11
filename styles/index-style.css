@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Libre+Franklin|Montserrat+Subrayada&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Libre+Franklin|Montserrat+Subrayada|Quicksand&display=swap');
 html{
     box-sizing: border-box;
 }
@@ -6,13 +6,12 @@ body,#header,#main,#footer {
     margin: 0 auto;
     padding: 0;
     font-family: 'Libre Franklin', sans-serif;
-    color: #2c4379;
     background: url(../image/volcano5.jpg) top center fixed no-repeat;
     background-size: cover;
 }
 a{
     text-decoration: none;
-    color: inherit;
+    /* color: inherit; */
 }
 /************************************* header *********************************************/
 #header{
@@ -50,6 +49,7 @@ h1{
     right: 3em;
     color: floralwhite;
     font-size: 0.9em;
+    font-family: 'Quicksand', sans-serif;
 }
 #scrolldown{
     color: floralwhite;
@@ -60,21 +60,46 @@ h1{
 #nav {
     position: absolute;
     top: 13em;
-    right: 2.5em;
-    text-align: left;
+    right: 3em;
+    width: 16%;
+    text-align: right;
+    line-height: 1.5em;
+    font-family: 'Quicksand', sans-serif;
 }
 #nav ul li{
     list-style: none;
     padding-bottom: 0.8em;
     font-size: 1em;
-    color: #c2d3e7;
+    color: #aec6e8; 
+
+}
+#nav ul li:hover {
+    font-size: 2em;
+    text-shadow: 2px 2px 2px #384460;
+    color: floralwhite;
 }
 #header_description{
     display: none;
     position: absolute;
-    top: 3.5em;
+    top: 4em;
+    left: 2em;
+    text-align: left;
     font-size: 3em;
+    padding: 0 1.3em;
+    margin: 0;
+    width: 60%;
     color: #384460;
+    background: rgb(255, 255, 255, 0.6);
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.3em;
+}
+#header_description span {
+    color:floralwhite;
+    text-shadow: 2px 2px 2px #384460;
+    font-family: 'Alex Brush', cursive;
+    padding-bottom: 0;
+    margin: 0;
+    line-height: 1.6em;
 }
 /*********************** reservation ********************/
 #reservation a {
