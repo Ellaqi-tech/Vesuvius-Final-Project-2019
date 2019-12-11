@@ -12,7 +12,7 @@ body,#uniform-header,#uniform-footer {
 }
 a {
     text-decoration: none;
-    color: #3d4760; /*** overall text color ***/
+    color: inherit;
 }
 
 /************************* header **************************/
@@ -155,9 +155,10 @@ a {
     text-align: center;
     height: 50px;
     line-height: 50px;
+    color: #f1f1f1 !important;
 }
-#footer-bottom2 a {
-    color: #f1f1f1;
+#footer-bottom2 a:link {
+    color: #f1f1f1 ;
 }
 /************************************* footer end ********************************/ 
 
