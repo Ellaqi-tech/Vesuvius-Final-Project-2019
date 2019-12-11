@@ -1,26 +1,4 @@
 window.onload = function() {
-<<<<<<< Updated upstream
-  // $(".italy").click(function(){
-  //   $(".country").removeClass("selected");
-  //   $(".italy").addClass("selected");
-  //   $('.region').hide();
-  //   $('.italy_locations').show();
-  // });
-  // $(".hawaii").click(function(){
-  //   $(".country").removeClass("selected");
-  //   $(".hawaii").addClass("selected");
-  //   $('.region').hide();
-  //   $('.hawaii_locations').show();
-  // });
-  // $(".greece").click(function(){
-  //   $(".country").removeClass("selected");
-  //   $(".greece").addClass("selected");
-  //   $('.region').hide();
-  //   $('.greece_locations').show();
-  // });
-
-=======
->>>>>>> Stashed changes
   $(".country_loc").click(function(){
     $(".country_loc").removeClass("selected");
     $(this).addClass("selected");
