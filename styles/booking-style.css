@@ -5,12 +5,12 @@
 .flex-container > * {
 	flex: 1 0 0;
 }
-booking-sitename {
+#booking-sitename {
     text-align: center;
-    transform: translateY(-1000%);
+    transform: translateY(-800%);
     color:white;
     font-weight:bold;
-    font-size:40px;
+    font-size: 1.5em;
 }
 .h2Booking {
    background: #D99E50;

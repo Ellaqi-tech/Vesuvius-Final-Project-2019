@@ -12,7 +12,7 @@ function bookingEventLoad() {
     });
     $('.event_picture').hover (
         function () {$(this).css({'box-shadow':'10px 10px 5px #888', 'background-color': 'black', 'color':'white'})},
-        function () {$(this).css({'box-shadow':'0px 0px 0px white', 'background-color':'white', 'color':'black'})}
+        function () {$(this).css({'box-shadow':'0px 0px 0px white', 'background' : 'url(../image/volcano5.jpg) top center fixed no-repeat', 'color':'black'})}
     );
     $("#bookingdate").datepicker();
     
