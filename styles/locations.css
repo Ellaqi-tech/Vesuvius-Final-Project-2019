@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+.page_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.locations_wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+.country_wrapper {
+  flex: 1 0 0;
+  display: flex;
+  flex-flow: column wrap;
+  margin-right: 3em;
+}
+.country {
+  flex: 2em 0 0;
+  text-align: center;
+  padding: 1em;
+}
+.volcano_wrapper {
+  flex: 1 0 0;
+  display: flex;
+  flex-flow: column wrap;
+  margin-right: 3em;
+}
+.volcano {
+  flex: 2em 0 0;
+  text-align: center;
+  padding: 1em;
+  /* margin-bottom: 2em; */
+  /* display: none; */
+}
+.location_info_wrapper {
+  flex: 3 0 0;
+}
+.location_info {
+  display: none;
+}
+.region {
+  display: none;
+}
+.selected {
+  background-color: red;
+}
+.title {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}

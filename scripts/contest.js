@@ -133,32 +133,16 @@ window.onload = function() {
         $("#meat_chara").css('left', x + "px");
       }
       // $("#meat_chara").css('left', x + "px");
-      $("#meat_chara").css('top', y + "px");
+      if(y > 536){
+        $("#meat_chara").css('top', "536px");
+      }
+      else {
+        $("#meat_chara").css('top', y + "px");
+      }
+
     }
-    // var x = event.pageX - $(this).offset().left;
-    // var y = event.pageY - $(this).offset().top;
-    // if(x > 536){
-    //   $("#meat_chara").css('left', "536px");
-    // }
-    // else {
-    //   $("#meat_chara").css('left', x + "px");
-    // }
-    // // $("#meat_chara").css('left', x + "px");
-    // $("#meat_chara").css('top', y + "px");
   }
 
-//   function checkbounds() {
-//     position = $('#meat_chara').position();
-// //    console.log("current position: " + position.left);
-//     if(position.left  <= 0 || (position.left + $('meat_chara').width()) >= 600) {
-//       if(position.left <= 0) {
-//         $('#meat_chara').css('left', '0px');
-//       }
-//       else {
-//         $('#meat_chara').css('left', '536px');
-//       }
-//     }
-//   }
   function enemy_spawn() {
     if(Math.random() > enemy_chance && /*$(".enemy_box").length % enemy_survived &&*/ gameOver === false) {
       var enemy;
@@ -186,30 +170,7 @@ window.onload = function() {
     // $(".enemy_box").remove();
     // $('#beach_wrap').append("<h2>Game Over!</h2>");
   }
-
-  function remove_flicker() {
-   // console.log("removing flicker");
-    $('.run_flicker').off('animationend', remove_flicker);
-    $('#damage_box').removeClass('run_flicker');
-  }
-
-  function remove_shoot() {
-//    console.log("removing volcano shoot");
-    $('.volcano_shoot').on('animationend', remove_shoot);
-    $('#volcano').removeClass('volcano_shoot');
-  }
-
-  function remove_Rskew() {
-//    console.log("removing right skew");
-    $('.skew_right').off('animationend', remove_Rskew);
-    $('#skew_box').removeClass('skew_right');
-  }
-
-  function remove_Lskew() {
-//    console.log("removing left skew");
-    $('.skew_left').off('animationend', remove_Lskew);
-    $('#skew_box').removeClass('skew_left');
-  }
+  
   /*Credit to user stackoverflow user TwystO for the following function for computing the current rotation state of an element*/
   function getRotationDegrees(obj) {
     var matrix = obj.css("-webkit-transform") ||
