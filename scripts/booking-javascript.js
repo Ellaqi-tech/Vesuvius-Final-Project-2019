@@ -7,16 +7,16 @@ function bookingEventLoad() {
     jQuery('.hidden').hide();
     jQuery('h2').click(function() {
         $(this).next('div').fadeToggle("5000");
-    //create effect for the galery
-    
+        
+    //create effect for the galery    
     });
-    $('.event_picture').hover (
+    $('.event-picture').hover (
         function () {$(this).css({'box-shadow':'10px 10px 5px #888', 'background-color': 'black', 'color':'white'})},
         function () {$(this).css({'box-shadow':'0px 0px 0px white', 'background' : 'url(../image/volcano5.jpg) top center fixed no-repeat', 'color':'black'})}
     );
     $("#bookingdate").datepicker();
     
-     //validate the form
+    //validate the form
     var formHandle = document.forms[0];
    
     formHandle.onsubmit = processForm;

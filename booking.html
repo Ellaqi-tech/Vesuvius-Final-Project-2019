@@ -39,20 +39,20 @@
                 
                 <div id="event" class="hidden"><h3>Our treasured moments</h3><p>Since our establishment, we have become a trusted event holding location. Who wouldn't want an outdoor wedding by the mountaint? Or a friend reunion by the fireside? In Pompeii, we have all the spaces you need for your event. Here is some of the treasured moments from our customers</p>                    
                     <div class="flex-container">
-                        <div id="wedding" class="event_picture">
+                        <div id="wedding" class="event-picture">
                             <img src="image/event-galery-wedding-resize.jpg" alt="A wedding held in an  restaurant"/>
                             <p>We are honour to witness Chris and Medina's happiness in 2016.</p>
                         </div >
-                        <div id="christmas" class="event_picture">
+                        <div id="christmas" class="event-picture">
                             <img src="image/event-galery-christmas.jpg" alt="A group of 4 friends raising the glass while smiling at the camera"/>
-                            <p>Jones and his friends enjoying a Christmas party at our restaurants</p>
+                            <p>Jones and his friends enjoyed a Christmas party at our restaurants</p>
                         </div >
-                        <div id="concert" class="event_picture">
+                        <div id="concert" class="event-picture">
                             <img src="image/event-galery-concert-reiszed.jpg" alt="A concert hall held in a restaurant" />
-                            <p>Ella and her band choose our restaurant to kick off her world tour concert in 2017</p>
+                            <p>Ella and her band chose our restaurant to kick off her world tour concert in 2017</p>
                         </div>
                         
-                        <div id="businessparty" class="event_picture">
+                        <div id="businessparty" class="event-picture">
                             <img src="image/event-galery-yep-resize.jpg"  alt="A group of colleagues having dinner in a restaurant"/>
                             <p>Ossy Entertainment held their year-end party in our restaurant</p>
                         </div>
@@ -70,9 +70,11 @@
                             <div class="booking-customer-info"><h3>Please enter your reservation information:</h3>
                                 <div><label for ="bookingdate">When do you want to visit us:</label></div>
                                 <input type="text" id="bookingdate" name="bookingdate"/>
-                                <div><label for ="bookinglocation">Which restaurant do you want to dine in:</label>
+                                <!--I can not use booking-date as a naming convention here because it will cause problem in Javascript -->
+                                <div><label for ="booking-location">Which restaurant do you want to dine in:</label>
                                 </div>                                
                                 <select id="bookinglocation" name="bookinglocation">
+                                    <!--I can not use booking-location as a naming convention here because it will cause problem in Javascript -->
                                     <option value="none">--Please select one--</option>
                                     <option value="kilaue">Kilaue</option>
                                     <option value="loihi">Loihi</option>
@@ -83,6 +85,7 @@
                                 </select>
                                 <div><label for ="bookingquantity">How many people do you plan to go with:</label></div>
                                 <select id="bookingquantity" name="bookingquantity">
+                                    <!--I can not use booking-quantity as a naming convention here because it will cause problem in Javascript -->
                                     <option value="none">--Please select one--</option> 
                                     <option value="0">I am going alone</option>
                                     <option value="1">1</option>
@@ -94,8 +97,8 @@
                                     <option value="more than 10">More than 10</option>
                                 </select>
                             </div>
-                            <div class="event_info"><h3>Please enter your event/dining requirement:</h3>
-                                <div><label for ="event_type">Which type of dining experience do you want to organize in our restaurant:</label>
+                            <div class="event-info"><h3>Please enter your event/dining requirement:</h3>
+                                <div><label for ="event-type">Which type of dining experience do you want to organize in our restaurant:</label>
                                 </div>                                
                                 <div><select id="event_type" name="event_type">
                                     <option value="none">--Please select one--</option>

@@ -16,7 +16,7 @@
    background: #D99E50;
     text-align: center;
 }
-.booking-customer-info, .event_picture, . event_info {
+.booking-customer-info, .event-picture, . event-info {
     flex: 1 0 0;
     text-align:center;
     margin: 1em;
