@@ -16,12 +16,17 @@ function careersLoad() {
 		if ($("#" + ($(this).attr("id")) + "-content").css("display") === "none") {
 			//Show the content
 			$("#" + ($(this).attr('id')) + "-content").show(toggleSpeed);
+			//Hide all the result jobs list
+			$("#result-job-list li").hide();
+		}
+		else {
+			//Show all the result jobs list
+			$("#result-job-list li").show();
 		}
 		
 		//Filter the result list
-		//Hide all the result jobs list
-		$("#result-job-list li").hide();
-		//Resturant or Corporate Content
+		
+		//Restaurant or Corporate Content
 		if ($(this).attr("id") !== "search-job") {
 			//For each li in the list do the following commands
 			$("#" + ($(this).attr("id")) + "-content ul li").each(function(idx, li) {
@@ -46,7 +51,7 @@ function careersLoad() {
 		
 	});
 	
-	//If the user click on the specific list elements of the Resturant or Corporate content
+	//If the user click on the specific list elements of the Restaurant or Corporate content
 	$(".job-content ul li").click(function() {
 		//Hide all the result jobs list
 		$("#result-job-list li").hide();
