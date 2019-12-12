@@ -3,14 +3,10 @@
 window.onload = function() {
   var play_stage = document.getElementById("beach_wrap");
   var position = 0;
-  var projectileXPositions = [];
-  var projectileYPositions = [];
-  var projectileList = [];
   var enemyXPositions = [];
   var enemyYPositions = [];
   var enemyList = [];
   var enemy_id = 0;
-  var projectile_id = 0;
   var game_speed = 33;
   var shoot_reset = true;
   var gameOver = false;
@@ -20,7 +16,6 @@ window.onload = function() {
   var move_refresh = true;
   var game_timer;
   var enemy_speed_increase = false;
-  //var $explosion = $("<div class='enemy_kill'></div>")
   $("#beach_wrap").click(start_click);
   function start_click() {
     $("#beach_wrap").unbind('click');
@@ -40,13 +35,10 @@ window.onload = function() {
     var game_timer = setInterval(play_game, game_speed);
   }
   function play_game() {
-    // var meat_location = $("#meat_chara").position();
     $('.enemy_box').animate({bottom: '-=3'}, 33, "linear");
-//    $('.enemy_kill').animate({top: '-=3'}, 33, "linear");
     $('#beach_wrap').mousemove(move_meat);
-    //checkbounds();
     if (enemy_survived > 5 && enemy_speed_increase === true) {
-      enemy_chance -= 0.01;
+      enemy_chance -= 0.02;
       enemy_speed_increase = false;
     }
 
@@ -56,18 +48,13 @@ window.onload = function() {
         var enemy_position = $(enemy_element).position();
         if((enemy_position.top + $(enemy_element).height()) > meat_location.top && (meat_location.top + $("#meat_chara").height()) > enemy_position.top && enemy_position.left < (meat_location.left + $('#meat_chara').width()) && (enemy_position.left + $(enemy_element).width()) > meat_location.left) {
           var explosion;
-          //              enemy_element.remove();
-          //              projectile_element.remove();
           explosion = document.createElement('div');
           explosion.setAttribute('class', 'enemy_kill');
           explosion.setAttribute('id', 'enemy_kill_' + kill_count);
           explosion.style.left = enemy_position.left + "px";
           explosion.style.top = enemy_position.top + 'px';
-          //              var enemy_location_id = $(enemy_element).attr("id");
-          //              var enemy_rotation = document.getElementById(enemy_location_id);
           explosion.style.transform = "rotate(" + getRotationDegrees($(enemy_element)) + "deg)";
           play_stage.appendChild(explosion);
-          //              $('#enemy_kill_' + kill_count).addClass('spin_ball')
           $('#enemy_kill_' + kill_count).on('animationend', remove_explosion);
           enemy_element.remove();
           $("#meat_chara").remove();
@@ -97,29 +84,7 @@ window.onload = function() {
     }
     enemy_spawn();
     move_refresh = true;
-    // if($('.enemy_box').length <= 2) {
-    //   var enemy;
-    //   var enemy_pos = (Math.random() * (600));
-    //   enemyXPositions.push(enemy_pos);
-    //   enemyYPositions.push(650);
-    //   enemy = document.createElement('div');
-    //   enemy.setAttribute('class', 'enemy_box');
-    //   enemy.setAttribute('id', "enemy_" + enemy_id);
-    //   enemy.style.left = enemy_pos + "px";
-    //   enemy.style.bottom = 475 + 'px';
-    //   play_stage.appendChild(enemy);
-    //   enemyList.push(document.getElementById("enemy_" + enemy_id));
-    //   enemy_id++;
-    // }
-//    if(enemy_id > 25) {
-//      clearInterval(game_timer);
-//      game_speed--;
-//      game_timer = setInterval(play_game, game_speed);
-//    }
   }
-
-//  document.addEventListener('click', play_stage);
-  //$('#beach_wrap').mousemove(move_meat);
 
   function move_meat() {
     if(move_refresh === true) {
@@ -132,7 +97,6 @@ window.onload = function() {
       else {
         $("#meat_chara").css('left', x + "px");
       }
-      // $("#meat_chara").css('left', x + "px");
       if(y > 536){
         $("#meat_chara").css('top', "536px");
       }
@@ -166,11 +130,8 @@ window.onload = function() {
     function remove_explosion() {
     this.remove();
     $('#enemy_kill_' + kill_count).off('animationend', remove_explosion);
-    //clearInterval(game_timer);
-    // $(".enemy_box").remove();
-    // $('#beach_wrap').append("<h2>Game Over!</h2>");
   }
-  
+
   /*Credit to user stackoverflow user TwystO for the following function for computing the current rotation state of an element*/
   function getRotationDegrees(obj) {
     var matrix = obj.css("-webkit-transform") ||
