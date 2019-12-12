@@ -1,0 +1,31 @@
+.flex-container {
+	display:flex;
+    flex-flow: row wrap;
+}
+.flex-container > * {
+	flex: 1 0 0;
+}
+
+main {
+	margin: 2em;
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
+
+#contact-form-method {
+	flex: 1 0 100%;
+}
+
+#contact-form {
+    flex-flow: column wrap;
+	display: none;
+}
+
+#user-comments {
+	flex: 1 0 100%;
+}
+
+#form-error-message {
+	color: red;
+}
+
