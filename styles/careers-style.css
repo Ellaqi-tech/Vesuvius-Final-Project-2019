@@ -12,6 +12,36 @@ main {
 	margin-bottom: 5em;
 }
 
+.quick-search-jobs {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.quick-search-jobs:hover {
+	border-width:3px;	
+}
+
+.job-content ul {
+	list-style-type: none;
+}
+
+.job-content ul li {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+	display: inline-block;
+	
+}
+
+.job-content ul li:hover {
+	border: 3px solid black
+}
+
+#search-job-input {
+	margin-top: 10px;
+}
+
 #quick-search-job {
 	flex: 1 0 100%;
 }
@@ -25,7 +55,7 @@ main {
 }
 
 .result-job-list-item:hover {
-	background-color: lightgray;
+	border: 3px solid black;
 }
 
 .result-job-id {
