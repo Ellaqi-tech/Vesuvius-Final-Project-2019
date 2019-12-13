@@ -211,7 +211,7 @@ a {
   display: none;
 }
 .selected {
-  background-color: red;
+  background-color: #f1f1f1;
 }
 .title {
   text-align: center;
