@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" type="text/css" href="styles/style.css" />	
+		<link rel="stylesheet" type="text/css" href="styles/uniform.css" />	
+		<link rel="stylesheet" type="text/css" href="styles/careers-style.css" />	
 		<link rel="stylesheet" type="text/css" href="lib/jquery-ui.css">
 		<script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="lib/jquery-ui.js"></script>
@@ -11,31 +12,30 @@
 		<title>Careers | Vesuvius</title>
 	</head>
 	<body>
-		<!-- Note this is just a placeholder for now (header content) -->
-		<header>
-			<h2>Vesuvius</h2>
-			<nav id="headerNav" class="mainNavigation">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="menu.html">Menu</a></li>
-					<li><a href="specials.html">Specials</a></li>
-					<li><a href="locations.html">Locations</a></li>
-					<li><a href="booking.html">Booking</a></li>
-					<li><a href="careers.html">Careers</a></li>
-					<li><a href="gift-cards.html">Gift Cards</a></li>
-					<li><a href="about-us.html">About Us</a></li>
-					<li><a href="contact-us.html">Contact Us</a></li>
-					<li><a href="contest.html">Contest</a></li>
-					<li><a href="site-map.html">Site Map</a></li>
-				</ul>
-			</nav>
-		</header>
+		<header id="uniform-header">
+            <div id="header-flex" class="top-bar fixed">
+                <div id="header-logo"><a href="index.html">Pompeii BBQ</a></div>
+                <div id="header-nav">
+                <ul>
+                    <li><a href="index.html">WELCOME</a></li>
+                    <li><a href="about-us.html">ABOUT</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contest.html">CONTEST</a></li>
+                    <li><a href="contact-us.html">CONTACT</a></li>
+                </ul>
+                </div>
+                <div id="header-booking"><a href="booking.html">MAKE A RESERVATION</a></div>
+            </div>
+        </header>
 		<div class="flex-container">
 			<main>
 				<h1>Careers</h1>
 				<div class="flex-container">
-					<div id="resturant-job" class="quick-search-jobs">
-						<h2>Resturant Jobs</h2>
+					<div id="applyJobInstruction">
+						<p>Please send your application by email. With the name of the email the job name and the job id. Attached to that email be your resume.</p>
+					</div>
+					<div id="restaurant-job" class="quick-search-jobs">
+						<h2>Restaurant Jobs</h2>
 					</div>
 					<div id="corporate-job" class="quick-search-jobs">
 						<h2>Corporate Jobs</h2>
@@ -44,7 +44,7 @@
 						<h2>Search</h2>
 					</div>
 					<div id="quick-search-job">
-						<div id="resturant-job-content" class="job-content">
+						<div id="restaurant-job-content" class="job-content">
 							<ul>
 								<li>Chef</li>
 								<li>Dishwasher</li>
@@ -92,6 +92,36 @@
 				</div>
 			</main>
 		</div>
-		<footer></footer>
+		<footer id="uniform-footer">
+            <div id="footer-content">
+                <div id="footer-flex1">
+                    <div id="footer-logo"><a href="index.html">Pompeii BBQ</a></div>
+                    <div id="footer-booking"><a href="booking.html">MAKE A RESERVATION</a></div>
+                    <div id="footer-tel">Tel.  (416) 675-3111<br>Email.   VESUVIUS@webdeveloper.com</div>
+                </div>
+                <div id="footer-flex2">
+                    <div id="footer-time">
+                    <p><span class="footer-timeslot">LUNCH</span><br>
+                        Friday, Saturday & Sunday:<br>
+                        Bookings from 12pm – 1.30pm<br>
+                        Thursdays in December
+                    </p>
+                    <p><span class="footer-timeslot">DINNER </span><br>
+                    Daily: Bookings from 6pm – 9pm</p>
+                    <p><span class="footer-timeslot">CHRISTMAS DAY</span><br>
+                    Open lunch</p>
+                    <p><span class="footer-timeslot">EVENTS</span><br>
+                    Lunch: Monday to Sunday from 12pm<br>
+                    Dinner: Monday to Sunday from 6pm</p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-bottom1">
+            Pompeii BBQ Restaurant 2019. ALL RIGHTS RESERVED
+            </div>
+            <div id="footer-bottom2"><a href="https://github.com/Yusha16/Vesuvius-Final-Project-2019">
+            DESIGNED BY TEAM VESUVIUS <span id="footerspan">- Christopher Maeda - Christopher Jones - Oswaldo Meza Brun - Paul Tran - Ella Qi</span></a>
+            </div>
+        </footer>
 	</body>
 </html>

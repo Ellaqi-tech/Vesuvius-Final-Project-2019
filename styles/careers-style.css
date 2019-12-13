@@ -1,0 +1,74 @@
+.flex-container {
+	display:flex;
+    flex-flow: row wrap;
+}
+.flex-container > * {
+	flex: 1 0 0;
+}
+
+main {
+	margin: 2em;
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
+
+#applyJobInstruction {
+	flex: 1 0 100%;
+}
+
+.quick-search-jobs {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.quick-search-jobs:hover {
+	border-width:3px;	
+}
+
+.job-content ul {
+	list-style-type: none;
+}
+
+.job-content ul li {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+	display: inline-block;
+	
+}
+
+.job-content ul li:hover {
+	border: 3px solid black
+}
+
+#search-job-input {
+	margin-top: 10px;
+}
+
+#quick-search-job {
+	flex: 1 0 100%;
+}
+
+#result-job {
+	flex: 1 0 100%;
+}
+
+.result-job-list-item {
+	border-bottom: 1px solid black;
+}
+
+.result-job-list-item:hover {
+	border: 3px solid black;
+}
+
+.result-job-id {
+	flex: 1 0 100%;
+}
+
+.result-job-detail {
+	flex: 1 0 100%;
+}
+
+
+

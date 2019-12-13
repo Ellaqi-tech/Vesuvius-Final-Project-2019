@@ -11,14 +11,14 @@ function contactUsLoad() {
 	});
 	
 	//When user pick on a country have the region option available
-	$("#resturant-country").change(function() {
+	$("#restaurant-country").change(function() {
 		//Enable all option related to the country
-		if (!($("#resturant-country").val() === "none")) {
-			$("#resturant-region").prop("disabled", false);
-			$("#resturant-region option").each(function()
+		if (!($("#restaurant-country").val() === "none")) {
+			$("#restaurant-region").prop("disabled", false);
+			$("#restaurant-region option").each(function()
 			{
 				//Show the correct region for that specific country
-				if ($(this).attr('class') === ($("#resturant-country").val() + "-option")) {
+				if ($(this).attr('class') === ($("#restaurant-country").val() + "-option")) {
 					$(this).css("display", "inline-block");
 				}
 				//Otherwise hide the options (region not in that country)
@@ -29,8 +29,8 @@ function contactUsLoad() {
 		}
 		else {
 			//Reset the options
-			$("#resturant-region").prop("disabled", true);
-			$("#resturant-region").prop('selectedIndex', 0);
+			$("#restaurant-region").prop("disabled", true);
+			$("#restaurant-region").prop('selectedIndex', 0);
 		}
 	});
 	
@@ -42,14 +42,19 @@ function contactUsLoad() {
 	
 	//Validation when user hits the submit button
 	function processContactForm() {
-		//Validate the resturant country
-		if ($("#resturant-country").val() === "none") {
-			$("#resturant-country").focus();
+		//Reset the error message
+		$("#form-error-message").html("");
+		
+		//Validate the restaurant country
+		if ($("#restaurant-country").val() === "none") {
+			$("#restaurant-country").focus();
+			$("#form-error-message").html("Please enter a valid country!");
 			return false;
 		}
-		//Validate the resturant region
-		if ($("#resturant-region").val() === "none") {
-			$("#resturant-region").focus();
+		//Validate the restaurant region
+		if ($("#restaurant-region").val() === "none") {
+			$("#restaurant-region").focus();
+			$("#form-error-message").html("Please enter a valid region!");
 			return false;
 		}
 		
@@ -57,6 +62,7 @@ function contactUsLoad() {
 		var regexDay = /^(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d\d$/i;
 		if ($("#visit-day").val() !== "" && !regexDay.test($("#visit-day").val())) {
 			$("#visit-day").focus();
+			$("#form-error-message").html("Please enter a valid day!");
 			return false;
 		}
 		
@@ -65,19 +71,24 @@ function contactUsLoad() {
 		var regexTime = /^(([01][1-9])|2[0-3]):(0[1-9]|([0-5][0-9]))$/i;
 		if ($("#visit-time").val() !== "" && !regexTime.test($("#visit-time").val())) {
 			$("#visit-time").focus();
+			$("#form-error-message").html("Please enter a valid time!");
 			return false;
 		}		
 		
-		//Validate the visit type
+		//Validate the visit type (Not needed due to it is a drop down list and it is not required). The commented it code will allow you to check if we wanted to make it check.
+		/*
 		if ($("#visit-type").val() === "none") {
 			$("#visit-type").focus();
+			$("#form-error-message").html("Please enter a valid visit type!");
 			return false;
 		}
+		*/
 		
 		//Validate the user phone number
 		var regexPhoneNumber = /^\d{3}[-\s]*\d{3}[-\s]*\d{4}$/i;
 		if (!regexPhoneNumber.test($("#user-phone").val())) {
 			$("#user-phone").focus();
+			$("#form-error-message").html("Please enter a valid phone number!");
 			return false;
 		}
 		
@@ -86,6 +97,7 @@ function contactUsLoad() {
 		var regexEmail = /^\w+.\w+@\w+.com$/i;
 		if (!regexEmail.test($("#user-email").val()) && $("#user-email").val() !== "") {
 			$("#user-email").focus();
+			$("#form-error-message").html("Please enter a valid email address!");
 			return false;
 		}
 		
