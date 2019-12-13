@@ -12,6 +12,10 @@ main {
 	margin-bottom: 5em;
 }
 
+#applyJobInstruction {
+	flex: 1 0 100%;
+}
+
 .quick-search-jobs {
 	border: 1px solid black;
 	border-radius: 5px;

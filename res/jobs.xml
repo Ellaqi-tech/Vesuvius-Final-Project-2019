@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jobList>
+	<job>
+		<name>Waiter</name>
+		<location>Vesuvius</location>
+		<salary>$20.00/hour</salary>
+		<id>1</id>
+		<description></description>
+		<requirement>High School Diploma</requirement>
+	</job>
+	<job>
+		<name>Developer</name>
+		<location>Stromboli</location>
+		<salary>$30.00/hour</salary>
+		<id>2</id>
+		<description></description>
+		<requirement>College Diploma</requirement>
+	</job>
+</jobList>
