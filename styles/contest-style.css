@@ -211,6 +211,7 @@ a {
   overflow: hidden;
 }
 #beach_background {
+  /* Background created by DeviantArt user SuperManosBros (https://www.deviantart.com/supermanosbros/art/8bit-beach-254193451), used for educational purposes only */
   background: url(../image/beach.png) top center;
   width: 600px;
   height: 450px;
@@ -251,6 +252,7 @@ a {
   position: absolute;
   width: 64px;
   height: 64px;
+  /* Steak from free use asset pack created by HenrySoftware, accessed from itch.io (https://henrysoftware.itch.io/pixel-food), for educational purposes only */
   background: url(../image/Steak.png) top left;
   background-size: cover;
   transform-origin: center;
